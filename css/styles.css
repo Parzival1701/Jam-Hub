@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+:root {
+  --color-background: #d5e3e6;
+  --color-header-footer: #4a6670;
+  --color-primary-accent: #e0a458;
+  --color-primary-accent-dark: #c48a35;
+  --color-light-text: #fff;
+  --color-dark-text: #000000;
+  --color-card-background: #ffffff;
+  --color-step-background: #e3ecee;
+  --color-third-accent: #000000;
+  --space-small: 16px;
+  --space-big: 44px;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "space Grotesk", sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  margin: 0;
+  line-height: 150%;
+  font-size: clamp(1rem, 0.824rem + 0.7512vw, 1.5rem);
+}
+
+/* body li {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 0.824rem + 0.751vw, 1.5rem);
+  line-height: 1.5;
+} */
+
+header {
+  align-items: center;
+  background-color: var(--color-header-footer);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--space-small);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: var(--color-light-text);
+  flex: 1;
+  padding: var(--space-small) 0;
+  text-decoration: none;
+  font-size: clamp(1.5rem, 0.8785rem + 2.6519vw, 3rem);
+}
+
+nav {
+  flex: 0;
+}
+
+#drop-content {
+  background-color: var(--color-card-background);
+  display: none;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+#drop-content.open {
+  display: block;
+}
+
+#drop-content li {
+  list-style: none;
+}
+
+#drop-content a {
+  border-bottom: var(--color-header-footer) solid 2px;
+  color: var(--color-dark-text);
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+  font-size: clamp(1.625rem, 1.581rem + 0.188vw, 1.75rem);
+}
+
+#hamburger {
+  background: none;
+  border: none;
+  color: var(--color-light-text);
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 0;
+}
+
+.hero {
+  background-image: url(../images/hero.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 25vh;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h1 {
+  color: var(--color-light-text);
+  padding: 1rem 4rem;
+  font-size: clamp(3rem, 2.648rem + 1.502vw, 4rem);
+  line-height: 1.2;
+  margin: 0;
+  background-color: black;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.btn-big {
+  background-color: var(--color-primary-accent);
+  padding: 1rem 7rem;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 3px 5px 1px var(--color-third-accent);
+  text-decoration: none;
+  font-size: clamp(1.25rem, 0.898rem + 1.502vw, 2.25rem);
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--color-dark-text);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 0.972rem + 2.254vw, 3rem);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+footer {
+  background-color: var(--color-header-footer);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-small);
+  margin-top: auto;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--color-light-text);
+  font-size: clamp(1rem, 0.736rem + 1.127vw, 1.75rem);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+footer p {
+  margin-top: auto;
+  margin: 0;
+  color: var(--color-light-text);
+  padding-top: 0.5rem;
+  font-size: clamp(1rem, 0.736rem + 1.127vw, 1.75rem);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Home Page Styles */
+#card-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#card-1 li,
+#card-2 figcaption {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 0.824rem + 0.751vw, 1.5rem);
+  line-height: 1.5;
+}
+
+#card-1 {
+  background-color: var(--color-card-background);
+  border-radius: 20px;
+  justify-items: center;
+  padding: 0.5rem 1rem;
+  margin-top: var(--space-small);
+}
+
+#card-1 ul {
+  padding: 0 1rem;
+}
+
+#card-1 li {
+  background-color: var(--color-step-background);
+  border: solid 1px var(--color-third-accent);
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  list-style-type: none;
+}
+
+#card-2 {
+  background-color: var(--color-card-background);
+  border-radius: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  margin: var(--space-small) 0;
+}
+
+#headphone-tutorial {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: var(--space-small);
+}
+
+#video-thumb {
+  aspect-ratio: 4 / 3;
+  background-image: url(../images/how-to-jam.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: var(--space-small);
+  min-height: clamp(12rem, 45vw, 30rem);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* #video-thumb img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+} */
+
+#video-thumb p {
+  font-size: clamp(1rem, 0.824rem + 0.751vw, 1.5rem);
+  line-height: 1.2;
+  background-color: var(--color-third-accent);
+  color: var(--color-light-text);
+  padding: .25rem;
+  border-radius: 20px;
+}
+
+#card-2 button {
+  background-color: var(--color-primary-accent);
+  width: 100px;
+  border-radius: 20px;
+}
+
+#card-2 button img {
+  padding: var(--space-small);
+}
